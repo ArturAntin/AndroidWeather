@@ -48,9 +48,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MainActivity extends AppCompatActivity {
 
-    RecyclerView list;
-    List<Item> items;
-    MyAdapter adapter;
+    private RecyclerView list;
+    private List<Item> items;
+    private MyAdapter adapter;
 
 
     @Override
@@ -158,9 +158,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
-        List<Item> items;
-        SimpleDateFormat dateFormat = new SimpleDateFormat("EE dd.MM", Locale.GERMAN);
-        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.GERMAN);
+        private List<Item> items;
+        private SimpleDateFormat dateFormat = new SimpleDateFormat("EE dd.MM", Locale.GERMAN);
+        private SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm", Locale.GERMAN);
 
         MyAdapter(List<Item> items) {
             this.items = items;
@@ -215,8 +215,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         class ViewHolder extends RecyclerView.ViewHolder {
-            TextView date, sunrise, sunset, tempHigh, tempLow;
-            ImageView icon;
+            private TextView date, sunrise, sunset, tempHigh, tempLow;
+            private bImageView icon;
 
 
             ViewHolder(@NonNull View itemView) {
